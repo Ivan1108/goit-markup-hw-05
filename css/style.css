@@ -78,6 +78,38 @@ a {
 .work-fotos-list:not(:last-child){
   margin-right: 30px;
 }
+.work-thumb::before{
+  display: flex;
+  content: "";
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  bottom: 0px;
+  background: rgba(47, 48, 58, 0.8);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-text-color);
+}
+.thumb-one::before{
+  content: "Десктопные приложения";
+}
+.thumb-two::before{
+  content: "Мобильные приложения";
+}
+.thumb-three::before{
+  content: "Дизайнерские решения";
+}
+.work-thumb{
+  position: relative;
+}
 .team-fotos{
   display: flex;
 }
@@ -219,11 +251,85 @@ a {
   margin-bottom: 30px;
   flex-basis: calc(100% / 3 - 30px);
   margin-right: 30px;
+  position: relative;
+  overflow: hidden;
 }
 .images-portfolio:focus,
 .images-portfolio:hover{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
+.portfolio-thumb{
+  display: flex;
+  content: "";
+  width: 370px;
+  height: 294px;
+  position: absolute;
+  background: rgba(33, 150, 243, 0.9);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100%);
+
+}
+/* .portfolio-thumb::before{
+  display: flex;
+  content: "";
+  width: 370px;
+  height: 294px;
+  position: absolute;
+  background: rgba(33, 150, 243, 0.9);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100%);
+  transition: transform 250ms ease;
+  opacity: 0;
+} */
+/* .portfolio-thumb:hover::before{
+  opacity: 1;
+}
+.portfolio-thumb-one::before{
+  content: "Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.";
+}
+.portfolio-thumb-two::before{
+  content: "Новостной портал";
+}
+.portfolio-thumb-three::before{
+  content: "Приложение для ресторана";
+}
+.portfolio-thumb-four::before{
+  content: "Бренды";
+}
+.portfolio-thumb-five::before{
+  content: "Приложения";
+}
+.portfolio-thumb-six::before{
+  content: "Веб-сйты";
+}
+.portfolio-thumb-seven::before{
+  content: "Новости";
+}
+.portfolio-thumb-eight::before{
+  content: "Проекты";
+}
+.portfolio-thumb-nine::before{
+  content: "Бизнес";
+} */
 .img-tittle {
   color: var(--tittle-text-color);
   font-weight: 700;
