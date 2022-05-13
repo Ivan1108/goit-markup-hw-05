@@ -177,6 +177,7 @@ a {
   background-color: #2196f3;
   width: 100%;
   height: 3px;
+  transform: translateY(30px);
   display: flex;
 }
 .contacts-link {
