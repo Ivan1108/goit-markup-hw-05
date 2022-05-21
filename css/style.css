@@ -438,7 +438,7 @@ a {
   margin-bottom: 50px;
   text-align: center;
 }
-.client-list-block{
+.client-link{
   border: 1px solid #AFB1B8;
   box-sizing: border-box;
   border-radius: 4px;
@@ -447,9 +447,11 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #AFB1B8;
 }
-.client-list-block:hover{
+.client-link:hover{
   border-color: var(--accent-color-text);
+  color: var(--accent-color-text);
 }
 .client-list-item:not(:last-child){
   margin-right: 30px;
@@ -460,7 +462,7 @@ a {
 .client-icon{
   width: 106px;
   height: 60px;
-  fill:#AFB1B8;
+  fill:currentColor
 }
 .client-icon:hover{
   fill: var(--accent-color-text);
