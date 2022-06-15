@@ -126,16 +126,30 @@ a {
   justify-content: center;
   align-items: center;
 }
-.social-item{
-  width: 44px;
-  height: 44px;
+.social-link{
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  color:#AFB1B8;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-link:hover,
+.social-link:focus{
+  background-color: var(--accent-color-text);
+  color: var(--primary-text-color);
+}
+.social-item{
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-icon{
   background: rgba(255, 255, 255, 0.1);
+  
 }
 .social-item:not(:last-child){
     margin-right: 10px;
@@ -143,7 +157,7 @@ a {
 .social-icon{
   width: 20px;
   height: 20px;
-  fill:#AFB1B8;
+  fill:currentColor;
 }
 .footer-icon{
   fill: #fff;
@@ -151,27 +165,55 @@ a {
 .social-item:hover{
   background-color: var(--accent-color-text);
 }
+.nav-logo {
+  color: #2196f3;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+.nav-logo2 {
+  color: var(--main-color-text);
+  font-size: 26px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+
+.site-nav{
+  margin-left: 93px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+  display: flex;
+}
+.site-nav .site-nav__item:not(:last-child){
+  margin-right: 50px;
+}
 .header{
   border-bottom: 1px; 
+  border: 1px solid #ECECEC;
 }
-.header-link {
+
+.site-nav__link {
   color: var(--main-color-text);
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-link:hover,
-.header-link:focus {
+.site-nav__link:hover,
+.site-nav__link:focus {
   color: var(--accent-color-text);
 }
-.current {
+.site-nav__link--current {
   color: var(--accent-color-text);
   
 }
-.current::after{
+.site-nav__link--current::after{
   text-decoration: underline;
   content: "";
   background-color: #2196f3;
@@ -180,7 +222,15 @@ a {
   transform: translateY(30px);
   display: flex;
 }
-.contacts-link {
+.contacts-list{
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.contacts-list .contacts-list__item +.contacts-list__item{
+  margin-left: 50px;
+}
+.contacts-list__link {
   text-decoration: none;
   color: #757575;
   font-weight: 500;
@@ -189,24 +239,18 @@ a {
   letter-spacing: 0.02em;
   display: flex;
   justify-content: center;
-  align-items: center
-  ;
+  align-items: center;
 }
-.item:hover{
-  fill: var(--accent-color-text);
-}
-.mail{
-  margin-right: 10px;
-}.phone{
-  margin-right: 10px;
-}
-.contacts-list .item +.item{
-  margin-left: 50px;
-}
-
-.contacts-link:hover,
-.contacts-link:focus {
+.contacts-list__link:hover,
+.contacts-list__link:focus {
   color: var(--accent-color-text);
+}
+.contacts-list__link--mail{
+  margin-right: 10px;
+  fill: currentColor;
+}.contacts-list__link--phone{
+  margin-right: 10px;
+  fill: currentColor;
 }
 .section-slogan{
   padding-top: 200px;
@@ -241,7 +285,9 @@ a {
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
-
+}
+.button-item:not(:last-child){
+  margin-right: 8px;
 }
 .button:hover,
 .button:focus {
@@ -448,8 +494,10 @@ a {
   justify-content: center;
   align-items: center;
   color: #AFB1B8;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.client-link:hover{
+.client-link:hover,
+.client-link:focus{
   border-color: var(--accent-color-text);
   color: var(--accent-color-text);
 }
@@ -463,9 +511,6 @@ a {
   width: 106px;
   height: 60px;
   fill:currentColor
-}
-.client-icon:hover{
-  fill: var(--accent-color-text);
 }
 .client{
   padding-bottom: 0px;
@@ -500,7 +545,7 @@ a {
   font-size: 16px;
   letter-spacing: 0.03em;
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 16px;
 }
 .container{
   margin:0 auto;
@@ -532,12 +577,29 @@ a {
   margin-top: 20px;
   font-style: normal;
 }
+.footer-div-second{
+  display: flex;
+}
 .footer-des{
   display: flex;
   justify-content: center;
   align-items: start;
   flex-direction: column;
   padding-left: 0px;
+}
+.footer-left{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  margin-right: 70px;
+}
+.footer-center{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  margin-right: 93px;
 }
 .work{
   padding-top: 0px;
